@@ -77,7 +77,7 @@ const LoginPage = () => {
             <label>Password</label>
             <input
               type="password"
-              id="password"
+              id="my_password"
               placeholder="********"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
