@@ -1,0 +1,26 @@
+{
+  "//input[@id='email']": {
+    "context": {
+      "element": "<input id=\"email\" placeholder=\"yourname@example.com\" required=\"\" type=\"email\" value=\"prashant.ranjan@gmail.com\">",
+      "nextElement": null,
+      "previousElement": "<label>Email</label>"
+    },
+    "timestamp": "2025-02-19T15:36:16.865Z"
+  },
+  "//input[@id='password']": {
+    "context": {
+      "element": "<input id=\"password\" placeholder=\"********\" required=\"\" type=\"password\" value=\"password123\">",
+      "nextElement": null,
+      "previousElement": "<label>Password</label>"
+    },
+    "timestamp": "2025-02-19T15:37:34.848Z"
+  },
+  "//input[@id='my_email']": {
+    "context": {
+      "element": "<input id=\"my_email\" placeholder=\"yourname@example.com\" required=\"\" type=\"email\" value=\"prashant.ranjan@gmail.com\">",
+      "nextElement": null,
+      "previousElement": "<label>Email</label>"
+    },
+    "timestamp": "2025-02-19T15:22:57.967Z"
+  }
+}

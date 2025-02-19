@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": "2025-02-19T15:08:33.309Z",
+    "oldLocator": "//input[@id='email']",
+    "newLocator": "//input[@id='my_email']",
+    "oldHtml": "",
+    "newHtml": "<input id='my_email' placeholder='yourname@example.com' required='' type='email' value=''>"
+  },
+  {
+    "timestamp": "2025-02-19T15:22:31.623Z",
+    "oldLocator": "//input[@id='email']",
+    "newLocator": "//input[@id='my_email']",
+    "oldHtml": "",
+    "newHtml": "<input id='my_email' placeholder='yourname@example.com' required='' type='email' value=''>"
+  },
+  {
+    "timestamp": "2025-02-19T15:23:37.193Z",
+    "oldLocator": "//input[@id='my_email']",
+    "newLocator": "//input[@id='email']",
+    "oldHtml": "",
+    "newHtml": "<input id='email' placeholder='yourname@example.com' required='' type='email' value=''>"
+  },
+  {
+    "timestamp": "2025-02-19T15:37:34.616Z",
+    "oldLocator": "//input[@id='email']",
+    "newLocator": "//input[@id='my_email']",
+    "oldHtml": "",
+    "newHtml": "<input id='my_email' placeholder='yourname@example.com' required='' type='email' value=''>"
+  }
+]

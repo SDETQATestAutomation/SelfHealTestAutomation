@@ -1,0 +1,7 @@
+{
+  "loginPage": {
+    "emailInput": "//input[@id='my_email']",
+    "passwordInput": "//input[@id='password']",
+    "loginButton": "//button[@id='submit']"
+  }
+}

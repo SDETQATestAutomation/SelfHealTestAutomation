@@ -1,3 +1,48 @@
 {
-    "git.ignoreLimitWarning": true
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.fontSize": 12,
+    "terminal.integrated.profiles.windows": {
+        "bash": {
+        "path": "/bin/bash",
+        }
+    },
+    "json.schemaDownload.enable": true,
+    "terminal.integrated.defaultProfile.windows": "bash",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "git.autofetch": true,
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": 1,
+    "editor.smoothScrolling": true,
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "breadcrumbs.enabled": false,
+    "http.proxyStrictSSL": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "cucumber.features": 
+    [
+        "src/test/**/*.feature",
+        "features/**/*.feature",
+        "tests/features/*.feature",
+        "*specs*/**/*.feature"
+    ],
+
+    "cucumberautocomplete.steps": [
+        "*/tests/stepdefs/*.js"
+    ],
+    "cucumberautocomplete.syncfeatures": "test/features/*.feature",
+    "snyk.trustedFolders": [
+    ],
+    "snyk.yesWelcomeNotification": false,
+    "terminal.integrated.defaultProfile.osx": "bash",
 }

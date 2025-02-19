@@ -1,0 +1,122 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;successful-login",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Successful login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1256417124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open the login page",
+            "match": {
+              "location": "tests/stepdefs/login.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 142906291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I enter valid credentials",
+            "match": {
+              "location": "tests/stepdefs/login.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35884972291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on the login button",
+            "match": {
+              "location": "tests/stepdefs/login.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6648166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see the landing page",
+            "match": {
+              "location": "tests/stepdefs/login.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1591247083
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 61608208
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 104584
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6414416
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          },
+          {
+            "name": "@Login-Scenario-1",
+            "line": 5
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [
+      {
+        "name": "@Login",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/Login.feature"
+  }
+]
