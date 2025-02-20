@@ -37,18 +37,31 @@ After(async function () {
   
   });
 
-After(function(scenario) {
-  if (scenario.result.status === Status.FAILED) {
-    // scenario.pickle.uri -> "features/login.feature"
-    // scenario.pickle.locations -> array of { line, column }
-    // Typically we want the first line number
-    if (scenario.pickle && scenario.pickle.uri && scenario.pickle.locations) {
-      const line = scenario.pickle.locations[0].line;
-      const scenarioRef = `${scenario.pickle.uri}:${line}`;
-      fs.appendFileSync(failedScenariosPath, scenarioRef + '\n');
-    } else {
-      // fallback if we can't get line number
-      fs.appendFileSync(failedScenariosPath, scenario.pickle.uri + '\n');
+  After(function(scenario) {
+    if (scenario.result.status === Status.FAILED) {
+      let scenarioTags = [];
+      if (
+        scenario.pickle &&
+        scenario.pickle.tags &&
+        scenario.gherkinDocument &&
+        scenario.gherkinDocument.feature &&
+        scenario.gherkinDocument.feature.tags
+      ) {
+        // Get feature-level tags (each tag object has a 'name' property)
+        const featureTags = scenario.gherkinDocument.feature.tags.map(tag => tag.name);
+        // Filter scenario tags: only include those that are NOT in featureTags.
+        scenarioTags = scenario.pickle.tags
+          .map(tag => tag.name)
+          .filter(tagName => !featureTags.includes(tagName));
+      } else if (scenario.pickle && scenario.pickle.tags && scenario.pickle.tags.length > 0) {
+        scenarioTags = scenario.pickle.tags.map(tag => tag.name);
+      }
+      if (scenarioTags.length > 0) {
+        fs.appendFileSync(failedScenariosPath, scenarioTags.join(' ') + '\n');
+      } else if (scenario.pickle && scenario.pickle.uri && scenario.pickle.locations) {
+        const line = scenario.pickle.locations[0].line;
+        const scenarioRef = `${scenario.pickle.uri}:${line}`;
+        fs.appendFileSync(failedScenariosPath, scenarioRef + '\n');
+      }
     }
-  }
-});
+  });

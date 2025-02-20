@@ -5,7 +5,7 @@
       "nextElement": null,
       "previousElement": "<label>Email</label>"
     },
-    "timestamp": "2025-02-19T15:54:44.238Z"
+    "timestamp": "2025-02-20T08:12:06.431Z"
   },
   "//input[@id='password']": {
     "context": {
@@ -13,7 +13,7 @@
       "nextElement": null,
       "previousElement": "<label>Password</label>"
     },
-    "timestamp": "2025-02-19T15:54:44.324Z"
+    "timestamp": "2025-02-20T08:12:06.504Z"
   },
   "//input[@id='my_email']": {
     "context": {
@@ -21,6 +21,14 @@
       "nextElement": null,
       "previousElement": "<label>Email</label>"
     },
-    "timestamp": "2025-02-19T15:41:31.451Z"
+    "timestamp": "2025-02-20T08:09:23.388Z"
+  },
+  "//input[@id='my_password']": {
+    "context": {
+      "element": "<input id=\"my_password\" placeholder=\"********\" required=\"\" type=\"password\" value=\"password123\">",
+      "nextElement": null,
+      "previousElement": "<label>Password</label>"
+    },
+    "timestamp": "2025-02-20T08:09:23.479Z"
   }
 }
