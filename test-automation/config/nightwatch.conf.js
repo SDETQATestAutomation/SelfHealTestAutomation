@@ -23,6 +23,8 @@ module.exports = {
       type: 'cucumber',
       options: {
         feature_path: 'tests/features/',
+        format: 'json:reports/cucumber.json',
+        auto_bind_steps: true,
         additional_config: ''
       }
     },
