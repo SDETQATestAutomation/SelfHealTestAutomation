@@ -5,7 +5,7 @@
       "nextElement": null,
       "previousElement": "<label>Email</label>"
     },
-    "timestamp": "2025-02-20T08:12:06.431Z"
+    "timestamp": "2025-02-20T12:48:23.882Z"
   },
   "//input[@id='password']": {
     "context": {
@@ -13,7 +13,7 @@
       "nextElement": null,
       "previousElement": "<label>Password</label>"
     },
-    "timestamp": "2025-02-20T08:12:06.504Z"
+    "timestamp": "2025-02-20T12:48:23.959Z"
   },
   "//input[@id='my_email']": {
     "context": {

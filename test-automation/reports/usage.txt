@@ -1,15 +1,15 @@
 ┌─────────────────────────────────┬───────────┬─────────────────────────────────┐
 │ Pattern / Text                  │ Duration  │ Location                        │
 ├─────────────────────────────────┼───────────┼─────────────────────────────────┤
-│ I enter valid credentials       │ 6409.31ms │ tests/stepdefs/login.js:10      │
-│   I enter valid credentials     │ 6409.31ms │ tests/features/Login.feature:8  │
+│ I enter valid credentials       │ 6415.70ms │ tests/stepdefs/login.js:10      │
+│   I enter valid credentials     │ 6415.70ms │ tests/features/Login.feature:8  │
 ├─────────────────────────────────┼───────────┼─────────────────────────────────┤
-│ I should see the landing page   │ 1618.10ms │ tests/stepdefs/login.js:19      │
-│   I should see the landing page │ 1618.10ms │ tests/features/Login.feature:10 │
+│ I should see the landing page   │ 1596.03ms │ tests/stepdefs/login.js:19      │
+│   I should see the landing page │ 1596.03ms │ tests/features/Login.feature:10 │
 ├─────────────────────────────────┼───────────┼─────────────────────────────────┤
-│ I open the login page           │ 197.45ms  │ tests/stepdefs/login.js:5       │
-│   I open the login page         │ 197.45ms  │ tests/features/Login.feature:7  │
+│ I open the login page           │ 141.39ms  │ tests/stepdefs/login.js:5       │
+│   I open the login page         │ 141.39ms  │ tests/features/Login.feature:7  │
 ├─────────────────────────────────┼───────────┼─────────────────────────────────┤
-│ I click on the login button     │ 7.59ms    │ tests/stepdefs/login.js:15      │
-│   I click on the login button   │ 7.59ms    │ tests/features/Login.feature:9  │
+│ I click on the login button     │ 8.59ms    │ tests/stepdefs/login.js:15      │
+│   I click on the login button   │ 8.59ms    │ tests/features/Login.feature:9  │
 └─────────────────────────────────┴───────────┴─────────────────────────────────┘
