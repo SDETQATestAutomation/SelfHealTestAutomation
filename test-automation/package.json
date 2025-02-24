@@ -12,6 +12,7 @@
     "chromedriver": "^133.0.1",
     "diff": "^7.0.0",
     "fs-extra": "^11.3.0",
-    "nightwatch": "^3.11.1"
+    "nightwatch": "^3.11.1",
+    "cucumber-html-reporter": "^7.2.0"
   }
 }
