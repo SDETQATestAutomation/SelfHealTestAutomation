@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const diff = require('diff');
 
-const locatorsFolder = path.join(__dirname, '..', 'locators'); // Folder containing locator JSON files
+// Folder containing locator JSON files.
+const locatorsFolder = path.join(__dirname, '..', 'locators');
 
 // History folder for saving locator change history and passed element context.
 const historyFolder = path.join(__dirname, '..', 'ElementHistory');
@@ -10,7 +11,7 @@ if (!fs.existsSync(historyFolder)) {
   fs.mkdirSync(historyFolder);
 }
 const historyPath = path.join(historyFolder, 'locatorHistory.json');
-// File to save passed element context
+// File to save passed element context.
 const passedElementsPath = path.join(historyFolder, 'passedElements.json');
 if (!fs.existsSync(passedElementsPath)) {
   fs.writeFileSync(passedElementsPath, JSON.stringify({}), 'utf-8');
@@ -50,6 +51,7 @@ function updateLocatorInFiles(selector, newSelector) {
 // Log locator changes into history.
 function logChange(oldLocator, newLocator, oldHtml, newHtml) {
   const history = JSON.parse(fs.existsSync(historyPath) ? fs.readFileSync(historyPath, 'utf-8') : '[]');
+  // Replace inner double quotes with single quotes for readability.
   const fixedOldHtml = oldHtml.replace(/"/g, "'");
   const fixedNewHtml = newHtml.replace(/"/g, "'");
   history.push({
@@ -109,6 +111,20 @@ async function captureElementContext(api, sel, isXpath) {
   return context;
 }
 
+// A simple similarity function that returns a ratio (0 to 1) of common characters.
+function similarity(s1, s2) {
+  if (!s1 || !s2) return 0;
+  s1 = s1.toLowerCase();
+  s2 = s2.toLowerCase();
+  let common = 0;
+  for (let char of s1) {
+    if (s2.includes(char)) {
+      common++;
+    }
+  }
+  return common / Math.max(s1.length, s2.length);
+}
+
 // Extract expected tag and attributes from the original selector.
 function extractExpectedAttributes(originalSelector, isXpath) {
   let expectedTag = null;
@@ -141,7 +157,7 @@ function extractExpectedAttributes(originalSelector, isXpath) {
 }
 
 // Find the closest matching locator by scanning the entire DOM.
-// Adds an extra bonus if the candidate's sibling context matches the saved context.
+// Combines a fixed weight map with dynamic similarity scoring.
 async function findClosestMatchingLocator(api, originalSelector, isXpath) {
   const { expectedTag, expectedAttrs } = extractExpectedAttributes(originalSelector, isXpath);
   let allDom = [];
@@ -164,12 +180,16 @@ async function findClosestMatchingLocator(api, originalSelector, isXpath) {
   }, [], function (result) {
     allDom = result.value;
   });
+  
   let bestMatch = null;
-  let bestScore = 0;
+  let bestScore = -Infinity;
+  // Define maximum weight for an attribute match.
   const weightMap = { id: 5, type: 3, class: 3, text: 2 };
+  const maxAttrWeight = 5; // Maximum contribution per attribute (if similarity=1)
+  // Extra bonus weight for matching sibling context.
   const contextBonus = 2;
-  // Retrieve saved context for the original selector, if any.
   const savedContext = getPassedElementContext(originalSelector);
+  
   allDom.forEach(domEl => {
     let score = 0;
     if (expectedTag && domEl.tagName === expectedTag) {
@@ -177,17 +197,16 @@ async function findClosestMatchingLocator(api, originalSelector, isXpath) {
     }
     for (let attr in expectedAttrs) {
       if (domEl.attributes[attr]) {
-        if (domEl.attributes[attr] === expectedAttrs[attr]) {
-          score += weightMap[attr] || 1;
-        } else if (domEl.attributes[attr].includes(expectedAttrs[attr])) {
-          score += (weightMap[attr] || 1) - 1;
-        }
+        let sim = similarity(domEl.attributes[attr], expectedAttrs[attr]);
+        score += sim * maxAttrWeight;
+      } else {
+        // Penalize if attribute is missing.
+        score -= 2;
       }
     }
     if (expectedTag && domEl.outerHTML.toLowerCase().includes(expectedTag)) {
       score += 1;
     }
-    // Compare previous and next sibling context if saved context is available.
     if (savedContext) {
       if (savedContext.previousElement && domEl.previousHTML === savedContext.previousElement) {
         score += contextBonus;
@@ -201,6 +220,7 @@ async function findClosestMatchingLocator(api, originalSelector, isXpath) {
       bestMatch = domEl;
     }
   });
+  
   if (bestMatch) {
     const tagName = bestMatch.tagName || expectedTag || 'unknown';
     let attrClauses = [];
@@ -226,9 +246,10 @@ async function findClosestMatchingLocator(api, originalSelector, isXpath) {
 // Main Exported Function
 // -------------------------
 
-// The autoHeal function encapsulates the auto-healing logic. It is called from other custom commands.
+// The autoHeal function encapsulates the auto-healing logic.
 async function autoHeal(api, selector) {
   const isXpath = selector.startsWith('//') || selector.startsWith('xpath=');
+  
   // Retrieve old HTML for the failing locator.
   let oldHtmlResult = '';
   await api.execute(function (sel, isXpath) {
@@ -244,12 +265,14 @@ async function autoHeal(api, selector) {
     oldHtmlResult = result.value;
   });
   let oldHtml = oldHtmlResult;
-  // Use helper to find a new locator.
+  
+  // Find a new locator using our helper.
   const newSelector = await findClosestMatchingLocator(api, selector, isXpath);
   if (!newSelector) {
     throw new Error(`AutoHeal: Could not repair locator "${selector}"`);
   }
   console.log(`AutoHeal: Proposed new selector: "${newSelector}"`);
+  
   // Retrieve new HTML.
   let newHtmlResult = '';
   await api.execute(function (sel, isXpath) {
@@ -265,12 +288,15 @@ async function autoHeal(api, selector) {
     newHtmlResult = result.value;
   });
   let newHtml = newHtmlResult;
+  
   const patch = diff.createPatch('element', oldHtml || '', newHtml || '');
   console.log('HTML Differences:\n', patch);
   console.log(`AutoHeal: Auto-confirming new locator "${newSelector}".`);
-  // Update locator in files.
+  
+  // Update locator in all locator files.
   updateLocatorInFiles(selector, newSelector);
   logChange(selector, newSelector, oldHtml, newHtml);
+  
   return newSelector;
 }
 

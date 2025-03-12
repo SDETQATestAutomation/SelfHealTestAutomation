@@ -1,0 +1,7 @@
+{
+  "parabank": {
+    "usernameInput": "//input[@name='username']",
+    "passwordInput": "//input[@name='password']",
+    "loginButton": "//input[@class='button']"
+  }
+}

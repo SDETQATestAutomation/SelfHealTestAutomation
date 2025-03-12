@@ -1,34 +1,26 @@
 {
-  "//input[@id='email']": {
+  "//input[@name='username']": {
     "context": {
-      "element": "<input id=\"email\" placeholder=\"yourname@example.com\" required=\"\" type=\"email\" value=\"prashant.ranjan@gmail.com\">",
+      "element": "<input type=\"text\" class=\"input\" name=\"username\">",
       "nextElement": null,
-      "previousElement": "<label>Email</label>"
+      "previousElement": null
     },
-    "timestamp": "2025-02-20T12:48:23.882Z"
+    "timestamp": "2025-03-12T02:26:29.433Z"
   },
-  "//input[@id='password']": {
+  "//input[@name='password']": {
     "context": {
-      "element": "<input id=\"password\" placeholder=\"********\" required=\"\" type=\"password\" value=\"password123\">",
+      "element": "<input type=\"password\" class=\"input\" name=\"password\">",
       "nextElement": null,
-      "previousElement": "<label>Password</label>"
+      "previousElement": null
     },
-    "timestamp": "2025-02-20T12:48:23.959Z"
+    "timestamp": "2025-03-12T02:26:29.484Z"
   },
-  "//input[@id='my_email']": {
+  "//input[@class='button']": {
     "context": {
-      "element": "<input id=\"my_email\" placeholder=\"yourname@example.com\" required=\"\" type=\"email\" value=\"prashant.ranjan@gmail.com\">",
+      "element": "<input type=\"submit\" class=\"button\" value=\"Log In\">",
       "nextElement": null,
-      "previousElement": "<label>Email</label>"
+      "previousElement": null
     },
-    "timestamp": "2025-02-20T08:09:23.388Z"
-  },
-  "//input[@id='my_password']": {
-    "context": {
-      "element": "<input id=\"my_password\" placeholder=\"********\" required=\"\" type=\"password\" value=\"password123\">",
-      "nextElement": null,
-      "previousElement": "<label>Password</label>"
-    },
-    "timestamp": "2025-02-20T08:09:23.479Z"
+    "timestamp": "2025-03-12T02:25:54.554Z"
   }
 }

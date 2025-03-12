@@ -4,7 +4,7 @@
     "elements": [
       {
         "description": "",
-        "id": "login;successful-login",
+        "id": "parabank-login;successful-login",
         "keyword": "Scenario",
         "line": 6,
         "name": "Successful login",
@@ -14,59 +14,46 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1123086333
+              "duration": 840020917
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "I open the login page",
+            "name": "I open parabank login page",
             "match": {
-              "location": "tests/stepdefs/login.js:5"
+              "location": "tests/stepdefs/parabank.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 141394958
+              "duration": 3687748458
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 8,
-            "name": "I enter valid credentials",
+            "name": "I enter valid credentials for parabank",
             "match": {
-              "location": "tests/stepdefs/login.js:10"
+              "location": "tests/stepdefs/parabank.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 6415704416
+              "duration": 180422542
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I click on the login button",
+            "name": "I click on the login button for parabank",
             "match": {
-              "location": "tests/stepdefs/login.js:15"
+              "location": "tests/stepdefs/parabank.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 8586624
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "I should see the landing page",
-            "match": {
-              "location": "tests/stepdefs/login.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1596028415
+              "duration": 8520899790
             }
           },
           {
@@ -74,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 70402500
+              "duration": 58159041
             }
           },
           {
@@ -82,7 +69,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 86999
+              "duration": 85082
             }
           },
           {
@@ -90,33 +77,33 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7707916
+              "duration": 3972166
             }
           }
         ],
         "tags": [
           {
-            "name": "@Login",
+            "name": "@ParabankLogin",
             "line": 1
           },
           {
-            "name": "@Login-Scenario-1",
+            "name": "@ParabankLogin-Scenario-1",
             "line": 5
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "login",
+    "id": "parabank-login",
     "line": 3,
     "keyword": "Feature",
-    "name": "Login",
+    "name": "Parabank Login",
     "tags": [
       {
-        "name": "@Login",
+        "name": "@ParabankLogin",
         "line": 1
       }
     ],
-    "uri": "tests/features/Login.feature"
+    "uri": "tests/features/parabank.feature"
   }
 ]

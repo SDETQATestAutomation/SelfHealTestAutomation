@@ -1,72 +1,9 @@
 [
   {
-    "timestamp": "2025-02-19T15:56:08.019Z",
-    "oldLocator": "//input[@id='email']",
-    "newLocator": "//input[@id='my_email']",
+    "timestamp": "2025-03-12T02:26:32.608Z",
+    "oldLocator": "//input[@class='buttonnn']",
+    "newLocator": "//input[@class='button']",
     "oldHtml": "",
-    "newHtml": "<input id='my_email' placeholder='yourname@example.com' required='' type='email' value=''>"
-  },
-  {
-    "timestamp": "2025-02-19T15:56:11.331Z",
-    "oldLocator": "//input[@id='password']",
-    "newLocator": "//input[@id='my_password']",
-    "oldHtml": "",
-    "newHtml": "<input id='my_password' placeholder='********' required='' type='password' value=''>"
-  },
-  {
-    "timestamp": "2025-02-20T08:13:26.257Z",
-    "oldLocator": "//input[@id='email']",
-    "newLocator": "//input[@id='my_email']",
-    "oldHtml": "",
-    "newHtml": "<input id='my_email' placeholder='yourname@example.com' required='' type='email' value=''>"
-  },
-  {
-    "timestamp": "2025-02-20T08:13:29.498Z",
-    "oldLocator": "//input[@id='password']",
-    "newLocator": "//input[@id='my_password']",
-    "oldHtml": "",
-    "newHtml": "<input id='my_password' placeholder='********' required='' type='password' value=''>"
-  },
-  {
-    "timestamp": "2025-02-20T08:14:36.774Z",
-    "oldLocator": "//input[@id='my_email']",
-    "newLocator": "//input[@id='email']",
-    "oldHtml": "",
-    "newHtml": "<input id='email' placeholder='yourname@example.com' required='' type='email' value=''>"
-  },
-  {
-    "timestamp": "2025-02-20T08:14:40.003Z",
-    "oldLocator": "//input[@id='my_password']",
-    "newLocator": "//input[@id='password']",
-    "oldHtml": "",
-    "newHtml": "<input id='password' placeholder='********' required='' type='password' value=''>"
-  },
-  {
-    "timestamp": "2025-02-20T12:52:19.436Z",
-    "oldLocator": "//input[@id='email']",
-    "newLocator": "//input[@id='my_email']",
-    "oldHtml": "",
-    "newHtml": "<input id='my_email' placeholder='yourname@example.com' required='' type='email' value=''>"
-  },
-  {
-    "timestamp": "2025-02-20T12:52:22.666Z",
-    "oldLocator": "//input[@id='password']",
-    "newLocator": "//input[@id='my_password']",
-    "oldHtml": "",
-    "newHtml": "<input id='my_password' placeholder='********' required='' type='password' value=''>"
-  },
-  {
-    "timestamp": "2025-02-20T12:54:49.191Z",
-    "oldLocator": "//input[@id='my_email']",
-    "newLocator": "//input[@id='email']",
-    "oldHtml": "",
-    "newHtml": "<input id='email' placeholder='yourname@example.com' required='' type='email' value=''>"
-  },
-  {
-    "timestamp": "2025-02-20T12:54:52.431Z",
-    "oldLocator": "//input[@id='my_password']",
-    "newLocator": "//input[@id='password']",
-    "oldHtml": "",
-    "newHtml": "<input id='password' placeholder='********' required='' type='password' value=''>"
+    "newHtml": "<input type='submit' class='button' value='Log In'>"
   }
 ]
