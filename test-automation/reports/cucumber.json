@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 840020917
+              "duration": 1299190833
             }
           },
           {
@@ -27,33 +27,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3687748458
+              "duration": 2950781041
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 8,
-            "name": "I enter valid credentials for parabank",
+            "name": "I click read more link",
             "match": {
-              "location": "tests/stepdefs/parabank.js:10"
+              "location": "tests/stepdefs/parabank.js:36"
             },
             "result": {
               "status": "passed",
-              "duration": 180422542
+              "duration": 6163823792
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I click on the login button for parabank",
+            "name": "I check data in table",
             "match": {
-              "location": "tests/stepdefs/parabank.js:15"
+              "location": "tests/stepdefs/parabank.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 8520899790
+              "duration": 8148107332
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 58159041
+              "duration": 65438042
             }
           },
           {
@@ -69,7 +69,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 85082
+              "duration": 173957
             }
           },
           {
@@ -77,7 +77,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 3972166
+              "duration": 4804000
             }
           }
         ],

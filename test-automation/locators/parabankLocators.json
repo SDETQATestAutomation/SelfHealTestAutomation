@@ -2,6 +2,10 @@
   "parabank": {
     "usernameInput": "//input[@name='username']",
     "passwordInput": "//input[@name='password']",
-    "loginButton": "//input[@class='button']"
+    "loginButton": "//input[@class='button']",
+    "registerLink": "//a[text()='Register']",
+    "image_parabank": "//img[@title='ParaBank']",
+    "read_more_link": "(//a[text()='Read More'])[1]",
+    "table_data": "//td[contains(.,'Bookstore')]"
   }
 }

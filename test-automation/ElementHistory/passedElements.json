@@ -22,5 +22,31 @@
       "previousElement": null
     },
     "timestamp": "2025-03-12T02:25:54.554Z"
+  },
+  "//a[text()='Register']": {
+    "context": {
+      "element": "<a href=\"register.htm\">Register</a>",
+      "nextElement": null,
+      "previousElement": null
+    },
+    "timestamp": "2025-03-15T05:42:08.918Z"
+  },
+  "//img[@title='ParaBank']": {
+    "context": {
+      "domPath": {
+        "distance": 5,
+        "path": [
+          "body:nth-child(2)",
+          "div:nth-child(1)",
+          "div:nth-child(1)",
+          "a:nth-child(2)",
+          "img"
+        ]
+      },
+      "element": "<img src=\"images/logo.gif\" alt=\"ParaBank\" width=\"136\" height=\"31\" border=\"0\" class=\"logo\" title=\"ParaBank\">",
+      "nextElement": null,
+      "previousElement": null
+    },
+    "timestamp": "2025-03-15T07:11:59.310Z"
   }
 }
