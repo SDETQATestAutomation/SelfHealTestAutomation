@@ -1,4 +1,4 @@
-const { autoHeal, captureElementContext, savePassedElementContext } = require('../autoHeal/autoHeal');
+const { autoHeal, captureElementContext, savePassedElementContext } = require('../autoHeal/repairAndRestore');
 
 module.exports = class CustomCommand {
   async command(selector, value) {

@@ -1,30 +1,37 @@
-┌──────────────────────────────────────────┬───────────┬───────────────────────────────────┐
-│ Pattern / Text                           │ Duration  │ Location                          │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I check data in table                    │ 8148.11ms │ tests/stepdefs/parabank.js:41     │
-│   I check data in table                  │ 8148.11ms │ tests/features/parabank.feature:9 │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I click read more link                   │ 6163.82ms │ tests/stepdefs/parabank.js:36     │
-│   I click read more link                 │ 6163.82ms │ tests/features/parabank.feature:8 │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I open parabank login page               │ 2950.78ms │ tests/stepdefs/parabank.js:5      │
-│   I open parabank login page             │ 2950.78ms │ tests/features/parabank.feature:7 │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I open the login page                    │ UNUSED    │ tests/stepdefs/login.js:5         │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I enter valid credentials                │ UNUSED    │ tests/stepdefs/login.js:10        │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I click on the login button              │ UNUSED    │ tests/stepdefs/login.js:15        │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I should see the landing page            │ UNUSED    │ tests/stepdefs/login.js:19        │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I enter valid credentials for parabank   │ UNUSED    │ tests/stepdefs/parabank.js:10     │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I click on the login button for parabank │ UNUSED    │ tests/stepdefs/parabank.js:15     │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I should see the landing page            │ UNUSED    │ tests/stepdefs/parabank.js:20     │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I click register parabank login page     │ UNUSED    │ tests/stepdefs/parabank.js:25     │
-├──────────────────────────────────────────┼───────────┼───────────────────────────────────┤
-│ I check paranbank image is present       │ UNUSED    │ tests/stepdefs/parabank.js:30     │
-└──────────────────────────────────────────┴───────────┴───────────────────────────────────┘
+┌────────────────────────────────────────────┬───────────┬────────────────────────────────────┐
+│ Pattern / Text                             │ Duration  │ Location                           │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I click read more link                     │ 5742.65ms │ tests/stepdefs/parabank.js:36      │
+│   I click read more link                   │ 5742.65ms │ tests/features/Parabank.feature:24 │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I click on the login button for parabank   │ 5671.20ms │ tests/stepdefs/parabank.js:15      │
+│   I click on the login button for parabank │ 5671.20ms │ tests/features/Parabank.feature:9  │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I click register parabank login page       │ 5502.45ms │ tests/stepdefs/parabank.js:25      │
+│   I click register parabank login page     │ 5502.45ms │ tests/features/Parabank.feature:14 │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I check paranbank image is present         │ 5433.01ms │ tests/stepdefs/parabank.js:30      │
+│   I check paranbank image is present       │ 5433.01ms │ tests/features/Parabank.feature:19 │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I check data in table                      │ 5063.43ms │ tests/stepdefs/parabank.js:41      │
+│   I check data in table                    │ 5063.43ms │ tests/features/Parabank.feature:25 │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I open parabank login page                 │ 3764.82ms │ tests/stepdefs/parabank.js:5       │
+│   I open parabank login page               │ 4448.71ms │ tests/features/Parabank.feature:7  │
+│   I open parabank login page               │ 3864.29ms │ tests/features/Parabank.feature:13 │
+│   I open parabank login page               │ 3536.80ms │ tests/features/Parabank.feature:23 │
+│   I open parabank login page               │ 3209.48ms │ tests/features/Parabank.feature:18 │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I enter valid credentials for parabank     │ 161.64ms  │ tests/stepdefs/parabank.js:10      │
+│   I enter valid credentials for parabank   │ 161.64ms  │ tests/features/Parabank.feature:8  │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I open the login page                      │ UNUSED    │ tests/stepdefs/login.js:5          │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I enter valid credentials                  │ UNUSED    │ tests/stepdefs/login.js:10         │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I click on the login button                │ UNUSED    │ tests/stepdefs/login.js:15         │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I should see the landing page              │ UNUSED    │ tests/stepdefs/login.js:19         │
+├────────────────────────────────────────────┼───────────┼────────────────────────────────────┤
+│ I should see the landing page              │ UNUSED    │ tests/stepdefs/parabank.js:20      │
+└────────────────────────────────────────────┴───────────┴────────────────────────────────────┘

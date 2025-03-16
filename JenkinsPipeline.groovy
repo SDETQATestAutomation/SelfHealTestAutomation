@@ -84,7 +84,7 @@ pipeline {
     failure {
       // On failure, run repairAndReexecution.js from the test-automation parent folder.
       dir("${TEST_DIR}") {
-        sh 'node ./repairAndReexecution.js'
+        sh 'node ./reRunFailureTest.js'
       }
       emailext(
         subject: "FAILURE: Build #${env.BUILD_NUMBER} - ${env.JOB_NAME}",

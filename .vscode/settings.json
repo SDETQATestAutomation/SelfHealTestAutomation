@@ -45,4 +45,5 @@
     ],
     "snyk.yesWelcomeNotification": false,
     "terminal.integrated.defaultProfile.osx": "bash",
+    "terminal.integrated.gpuAcceleration": "off"
 }
